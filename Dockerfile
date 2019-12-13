@@ -1,9 +1,9 @@
 FROM alpine:3.1
 
-ENV SUBGIT_VERSION=3.2.5
+ENV SUBGIT_VERSION=3.3.9
 
 RUN \
-  apk add --update curl bash openjdk7-jre && \
+  apk add --update curl bash openjdk8-jre && \
   rm -rf /var/cache/apk/* && \
   curl -o /tmp/subgit.zip https://subgit.com/download/subgit-${SUBGIT_VERSION}.zip && \
   cd /tmp && unzip subgit.zip && rm -f subgit.zip && \
